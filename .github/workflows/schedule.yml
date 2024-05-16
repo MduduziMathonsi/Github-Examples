@@ -1,10 +1,12 @@
-on:
- schedule:
-   - cron: '* * * * *'
+name: Every Minute Job
 
-   jobs:
-    Hello_World:
-     runs-on: ubuntu-latest
-      steps:
+on:
+  schedule:
+    - cron: "* * * * *"
+
+jobs:
+  Hello_World:
+    runs-on: ubuntu-latest
+    steps:
       - name: Echo current time
         run: echo "the current server time is $(date)"
